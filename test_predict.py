@@ -248,7 +248,7 @@ class InputEngineRnn:
             if result is not None:
                 words_line, letters_line, out_words_list, out_prob_list = result
 
-                for i in range(len(out_words_list)):
+                for i in range(len(out_words_list)-1):
                     print("\t".join(words_line[:i])
                           + "|#|"
                           + "|#|" + "\t".join(words_line[i:]) + "|#|"

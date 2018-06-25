@@ -7,6 +7,7 @@ def generation(data_in, data_out):
         with codecs.open(data_out, 'w') as f2:
             for line in f1.readlines():
                 line = line.strip()
+                line = line[:-1].strip()
                 words_line = line
                 words_line = words_line.replace('.', ' .')
                 words_line = words_line.replace(',', ' ,')
