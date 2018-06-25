@@ -156,7 +156,8 @@ class DataUtility:
         return words_line, letters_line, words_ids, letters_ids, words_num, letters_num
 
     def data2ids_line_only_words(self, data_line):
-        data_line.strip()
+        data_line = data_line.strip()
+        data_line = data_line[:-1].strip()
         data_line_letter, data_line_word = data_line.split('#')
         data_line_word.replace(".", " .")
         data_line_word.replace(",", " ,")
