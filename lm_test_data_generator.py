@@ -7,18 +7,18 @@ def generation(data_in, data_out):
         with codecs.open(data_out, 'w') as f2:
             for line in f1.readlines():
                 line = line.strip()
-                words = line
-                words = words.replace('.', ' .')
-                words = words.replace(',', ' ,')
-                words = words.replace("'", " ' ")
-                words = words.replace('"', ' " ')
-                words = words.replace("  ", " ")
-                words = words.split()
+                words_line = line
+                words_line = words_line.replace('.', ' .')
+                words_line = words_line.replace(',', ' ,')
+                words_line = words_line.replace("'", " ' ")
+                words_line = words_line.replace('"', ' " ')
+                words_line = words_line.replace("  ", " ")
+                words = words_line.split()
                 for word in words:
                     letters = list(word)
                     letters = ' '.join(letters)
                     f2.write(letters + '\t')
-                f2.write('#' + line + '\n')
+                f2.write('#' + words_line + '\n')
 
 
 if __name__ == '__main__':

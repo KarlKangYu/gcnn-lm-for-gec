@@ -250,13 +250,13 @@ class InputEngineRnn:
 
                 for i in range(len(out_words_list)):
                     print("\t".join(words_line[:i])
-                          + "|#|" + letters_line[i]
+                          + "|#|"
                           + "|#|" + "\t".join(words_line[i:]) + "|#|"
                           + '\t'.join([self.result_print(out_words, out_prob)
                                        for (out_words, out_prob) in zip(out_words_list[i], out_prob_list[i])])
                           + "\n")
                     testfileout.write("\t".join(words_line[:i])
-                                      + "|#|" + letters_line[i]
+                                      + "|#|"
                                       + "|#|" + "\t".join(words_line[i:]) + "|#|"
                                       + '\t'.join([self.result_print(out_words, out_prob)
                                                    for (out_words, out_prob) in
